@@ -1,0 +1,54 @@
+.body {
+  width: 100%;
+  .main_account {
+    width: 100%;
+    padding: 16px 14px 19px;
+    display: flex;
+    background-color: #f7f8fa;
+    border-radius: $border-radius;
+    border: 1px solid $border-color;
+    margin-bottom: 20px;
+
+    .avatar {
+      width: 42px;
+      height: 42px;
+      position: relative;
+      margin-right: 9px;
+      &_main {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      &_facebook {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+      }
+    }
+    .info {
+      &_name {
+        margin-bottom: 4px;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+      }
+      &_status {
+        &-text {
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 15px;
+          color: #35b26f;
+        }
+      }
+    }
+    button {
+      padding: 12px;
+      border: 1px solid $border-color;
+      border-radius: $border-radius;
+      background-color: #fff;
+      color: #4f4f4f;
+      margin-left: auto;
+      cursor: pointer;
+    }
+  }
+}
