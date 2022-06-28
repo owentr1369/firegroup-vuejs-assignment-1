@@ -18,7 +18,7 @@
   padding-top: 12px;
   padding-bottom: 12px;
   padding-left: 10px;
-  border: 1px solid #E5E8EF;
+  border: 1px solid #e5e8ef;
   border-radius: 4px;
 }
 
@@ -98,7 +98,7 @@
   display: flex;
   background-color: #f7f8fa;
   border-radius: 4px;
-  border: 1px solid #E5E8EF;
+  border: 1px solid #e5e8ef;
   margin-bottom: 20px;
 }
 
@@ -137,12 +137,45 @@
 
 .body .main_account button {
   padding: 12px;
-  border: 1px solid #E5E8EF;
+  border: 1px solid #e5e8ef;
   border-radius: 4px;
   background-color: #fff;
   color: #4f4f4f;
   margin-left: auto;
   cursor: pointer;
+}
+
+.body .business_account {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.body .business_account-title {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #252627;
+  margin-bottom: 8px;
+}
+
+.body .business_account-select {
+  width: 100%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 13px;
+  margin-bottom: 20px;
+  border-color: #e5e8ef;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #252627;
 }
 
 * {
@@ -180,7 +213,7 @@ body {
 
 .container .header {
   width: 100%;
-  border-bottom: 1px solid #E5E8EF;
+  border-bottom: 1px solid #e5e8ef;
   padding-bottom: 16px;
   font-weight: 600;
   font-size: 20px;
