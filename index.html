@@ -9,7 +9,7 @@
   </head>
   <body>
     <div id="app">
-      <div class="container">
+      <form class="container">
         <section class="header">
           <h1 class="header_text">Add New Facebook Pixel</h1>
         </section>
@@ -60,18 +60,39 @@
             </div>
             <button class="change">Change Account</button>
           </div>
+          <!-- Business Account -->
           <div class="business_account">
             <label for="" class="business_account-title"
               >Select Business Account</label
             >
-            <select name="" id="" class="business_account-select">
+            <select
+              name=""
+              id=""
+              class="business_account-select"
+              v-model="selectedId"
+            >
               <option value="">53425461676 - Rosy's Business</option>
+              <option
+                v-for="account in listBusinessAccount"
+                :key="account.id"
+                :value="account.id"
+              >
+                {{account.id}} - {{account.name}}
+              </option>
             </select>
           </div>
+          <!-- Pixel ID -->
           <div class="pixel">
             <label for="" class="pixel_title">Select Pixel</label>
             <select name="" id="" class="pixel_select">
               <option value="" selected hidden>Select your pixel</option>
+              <option
+                v-for="pixelId in newPixelList"
+                :key="pixelId.id"
+                :value="pixelId.name"
+              >
+                {{pixelId.parentId}} - {{pixelId.name}}
+              </option>
             </select>
           </div>
           <div class="missing">
@@ -89,25 +110,28 @@
         <!-- Is Manual Input -->
         <section class="body" v-else>
           <div class="name">
-            <label class="name_title">Name this pixel</label>
+            <label class="name_title" for="pixelName">Name this pixel</label>
             <input
               type="text"
               name=""
-              id=""
+              id="pixelName"
               class="name_input"
               placeholder="Input your pixel name"
+              required
+              pattern="[a-zA-Z]*"
             />
           </div>
           <div class="facebookid">
-            <label for="" class="facebookid_title"
+            <label for="pixelId" class="facebookid_title"
               >Enter Facebook Pixel ID</label
             >
             <input
-              type="text"
+              type="number"
               name=""
-              id=""
+              id="pixelId"
               class="name_input"
               placeholder="Input your pixel id"
+              required
             />
           </div>
         </section>
@@ -143,10 +167,10 @@
           </span>
         </section>
         <section class="footer">
-          <button class="cancel">Cancel</button>
-          <button class="save">Save</button>
+          <button class="cancel" @click.prevent="cancel">Cancel</button>
+          <button class="save" @submit.prevent="save">Save</button>
         </section>
-      </div>
+      </form>
     </div>
   </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.14/vue.common.dev.min.js"></script>

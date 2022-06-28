@@ -2,6 +2,8 @@ var app = new Vue({
   el: "#app",
   data: {
     isAuto: true,
+    selectedId: "",
+    newPixelList: [],
     listBusinessAccount: [
       {
         id: 255697,
@@ -90,6 +92,11 @@ var app = new Vue({
       } else if (this.isAuto == "false") {
         this.isAuto = false;
       }
+    },
+    selectedId: function () {
+      this.newPixelList = this.listPixelAccount.filter((selectedId) => {
+        return selectedId.parentId == this.selectedId;
+      });
     },
   },
 });

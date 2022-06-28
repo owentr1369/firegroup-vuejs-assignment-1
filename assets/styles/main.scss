@@ -16,10 +16,11 @@
 body {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
   min-height: 100vh;
   background-color: #f4f5f5;
+  padding-top: 24px;
 }
 .container {
   align-self: center;
