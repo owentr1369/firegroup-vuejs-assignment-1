@@ -132,4 +132,55 @@
       }
     }
   }
+  .name {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    &_title {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+      color: $header-color;
+      margin-bottom: 8px;
+    }
+    &_input {
+      width: 100%;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      padding-left: 13px;
+      margin-bottom: 20px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 16px;
+      color: $input-color;
+      border-radius: $border-radius;
+      border: 1px solid $border-color;
+    }
+  }
+  .facebookid {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    &_title {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+      color: $header-color;
+      margin-bottom: 8px;
+    }
+    &_input {
+      width: 100%;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      padding-left: 13px;
+      margin-bottom: 20px;
+      border-radius: $border-radius;
+      border: 1px solid $border-color;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 16px;
+      color: $input-color;
+      outline: none;
+    }
+  }
 }
