@@ -4,10 +4,123 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/styles/main.css" />
     <title>Document</title>
   </head>
   <body>
-    <div id="app">{{message}}</div>
+    <div id="app">
+      <div class="container">
+        <section class="header">
+          <h1 class="header_text">Add New Facebook Pixel</h1>
+        </section>
+        <!-- Is Auto Input -->
+        <section class="body" v-if="isAuto">
+          <div class="option">
+            <div class="option_left">
+              <input type="checkbox" name="" id="" />
+              <label for="">Auto input pixel</label>
+            </div>
+            <div class="option_right">
+              <input type="checkbox" name="" id="" />
+              <label for="">Manual input pixel</label>
+            </div>
+          </div>
+          <div class="main_account">
+            <div class="avatar">
+              <img src="./assets/images/avatar.png" alt="avatar" />
+              <img src="./assets/svg/facebook.svg" alt="facebook" />
+            </div>
+            <div class="info">
+              <h2 class="info_name">Lotusprayer Store</h2>
+              <div class="info_status">
+                <img src="./assets/svg/check.svg" alt="check" />
+                <span class="info_status-text">Connected</span>
+              </div>
+            </div>
+            <button class="change">Change Account</button>
+          </div>
+          <div class="business_account">
+            <label for="" class="business_account-title"
+              >Select Business Account</label
+            >
+            <select name="" id="" class="business_account-select">
+              <option value="">53425461676 - Rosy's Business</option>
+            </select>
+          </div>
+          <div class="pixel">
+            <label for="" class="pixel_title">Select Pixel</label>
+            <select name="" id="" class="pixel_select">
+              <option value="" selected hidden>Select your pixel</option>
+            </select>
+          </div>
+          <div class="missing">
+            <img src="./assets/svg/x-circle.svg" alt="" class="missing_icon" />
+            <div class="missing_content">
+              <h3 class="missing_content-header">Missing pixel</h3>
+              <span class="missing_content-text">
+                You don't have any Facebook Pixels in this Business Account.
+                Change Business Account or
+                <a href="#">Create New Facebook Pixel</a> first.
+              </span>
+            </div>
+          </div>
+        </section>
+        <!-- Is Manual Input -->
+        <section class="body" v-else>
+          <div class="name">
+            <label class="name_title">Name this pixel</label>
+            <input
+              type="text"
+              name=""
+              id=""
+              class="name_input"
+              placeholder="Input your pixel name"
+            />
+          </div>
+          <div class="facebookid">
+            <label for="" class="facebookid_title"
+              >Enter Facebook Pixel ID</label
+            >
+            <input
+              type="text"
+              name=""
+              id=""
+              class="name_input"
+              placeholder="Input your pixel id"
+            />
+          </div>
+        </section>
+        <section class="bototm">
+          <div class="target">
+            <label for="" class="target_title">Target</label>
+            <select class="target_select">
+              <option value="">Entire page</option>
+            </select>
+          </div>
+          <div class="conversion">
+            <div class="conversion_content">
+              <h3 class="conversion_content-header">Conversion API</h3>
+              <p class="conversion_content-text">
+                Facebook conversions API will help you collect accurate data and
+                improve the performance of your Facebook ads in a post-iOS 14
+                update world. <a href="#">Learn more</a>
+              </p>
+            </div>
+            <input type="checkbox" name="" id="" class="switch" />
+          </div>
+        </section>
+        <section class="upgrade">
+          <img src="./assets/svg/bell.svg" alt="" class="upgrade_icon" />
+          <span class="upgrade_content">
+            Please <strong>UPGRADE</strong> your plan to use Conversion API
+          </span>
+        </section>
+        <section class="footer">
+          <button class="cancel">Cancel</button>
+          <button class="save">Save</button>
+        </section>
+      </div>
+    </div>
   </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.14/vue.common.dev.min.js"></script>
   <script src="./main.js"></script>
