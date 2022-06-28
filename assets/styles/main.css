@@ -316,11 +316,11 @@
   text-decoration: none;
 }
 
-.bottom .conversion .checkbox {
+.bottom .conversion .switch {
   margin-left: 20px;
 }
 
-.bottom .conversion .checkbox input[type="checkbox"] {
+.bottom .conversion .switch input[type="checkbox"] {
   position: relative;
   width: 36px;
   height: 20px;
@@ -333,7 +333,7 @@
   cursor: pointer;
 }
 
-.bottom .conversion .checkbox input[type="checkbox"]::before {
+.bottom .conversion .switch input[type="checkbox"]::before {
   content: "";
   position: absolute;
   width: 14px;
@@ -349,11 +349,11 @@
   cursor: pointer;
 }
 
-.bottom .conversion .checkbox input:checked[type="checkbox"] {
+.bottom .conversion .switch input:checked[type="checkbox"] {
   background: #5b86e5;
 }
 
-.bottom .conversion .checkbox input:checked[type="checkbox"]::before {
+.bottom .conversion .switch input:checked[type="checkbox"]::before {
   left: 18px;
 }
 
