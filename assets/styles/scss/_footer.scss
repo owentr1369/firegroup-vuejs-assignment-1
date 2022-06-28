@@ -1,0 +1,29 @@
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  border-top: 1px solid #e5e8ef;
+  .cancel,
+  .save {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    border-radius: $border-radius;
+    border: none;
+    cursor: pointer;
+  }
+  .cancel {
+    color: $header-color;
+    width: 28%;
+    border: 1px solid #e5e8ef;
+    background: #fff;
+  }
+  .save {
+    width: 66%;
+    background-color: #5b86e5;
+    color: #fff;
+  }
+}

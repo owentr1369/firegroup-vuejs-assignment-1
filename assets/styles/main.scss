@@ -4,6 +4,7 @@
 @import "./scss/body";
 @import "./scss/bottom";
 @import "./scss/upgrade";
+@import "./scss/footer";
 
 * {
   margin: 0;
@@ -18,6 +19,7 @@ body {
   align-items: center;
   width: 100%;
   min-height: 100vh;
+  background-color: #f4f5f5;
 }
 .container {
   align-self: center;
@@ -26,6 +28,8 @@ body {
   min-width: 420px;
   max-width: 800px;
   margin: auto;
+  background-color: #fff;
+  border-radius: 16px;
   .header {
     width: 100%;
     border-bottom: 1px solid $border-color;
