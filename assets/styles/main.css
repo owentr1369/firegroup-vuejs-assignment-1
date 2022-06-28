@@ -25,6 +25,7 @@
 .option_left input[type="radio"], .option_right input[type="radio"] {
   margin-right: 7px;
   position: relative;
+  cursor: pointer;
 }
 
 .option_left input[type="radio"]:checked::after, .option_right input[type="radio"]:checked::after {
@@ -76,6 +77,7 @@
   line-height: 17px;
   -webkit-transition: all 0.1s;
   transition: all 0.1s;
+  cursor: pointer;
 }
 
 .option .active {

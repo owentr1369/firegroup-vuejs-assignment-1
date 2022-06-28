@@ -14,12 +14,25 @@
           <h1 class="header_text">Add New Facebook Pixel</h1>
         </section>
         <section class="option">
-          <div class="option_left" :class="{ active: isAuto }">
-            <input type="radio" id="auto" name="check" checked />
+          <div class="option_left" :class="isAuto ? 'active' : ''">
+            <input
+              type="radio"
+              id="auto"
+              name="check"
+              checked
+              v-model="isAuto"
+              value="true"
+            />
             <label for="auto">Auto input pixel</label>
           </div>
-          <div class="option_right" :class="{ active: !isAuto }">
-            <input type="radio" id="manual" name="check" />
+          <div class="option_right" :class="isAuto ? '' : 'active'">
+            <input
+              type="radio"
+              id="manual"
+              name="check"
+              v-model="isAuto"
+              value="false"
+            />
             <label for="manual">Manual input pixel</label>
           </div>
         </section>
@@ -120,7 +133,11 @@
           </div>
         </section>
         <section class="upgrade">
-          <img src="./assets/svg/bell.svg" alt="" class="upgrade_icon" />
+          <img
+            :src="isAuto ? './assets/svg/bell.svg' : './assets/svg/crown.svg'"
+            alt=""
+            class="upgrade_icon"
+          />
           <span class="upgrade_content">
             Please <strong>UPGRADE</strong> your plan to use Conversion API
           </span>
