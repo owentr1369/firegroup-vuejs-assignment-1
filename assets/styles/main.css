@@ -225,6 +225,8 @@
       -ms-flex-align: start;
           align-items: flex-start;
   margin-bottom: 20px;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
 }
 
 .body .missing_icon {
@@ -443,6 +445,7 @@
   border: 1px solid #ff9600;
   border-radius: 4px;
   margin-bottom: 29px;
+  cursor: pointer;
 }
 
 .upgrade_icon {

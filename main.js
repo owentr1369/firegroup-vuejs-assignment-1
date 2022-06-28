@@ -4,6 +4,8 @@ var app = new Vue({
     isAuto: true,
     selectedId: "",
     newPixelList: [],
+    conversionApi: false,
+    isMissing: false,
     listBusinessAccount: [
       {
         id: 255697,
@@ -85,6 +87,7 @@ var app = new Vue({
       },
     ],
   },
+  methods: {},
   watch: {
     isAuto: function () {
       if (this.isAuto == "true") {
@@ -94,9 +97,14 @@ var app = new Vue({
       }
     },
     selectedId: function () {
-      this.newPixelList = this.listPixelAccount.filter((selectedId) => {
-        return selectedId.parentId == this.selectedId;
+      this.newPixelList = this.listPixelAccount.filter((Pixel) => {
+        return Pixel.parentId === this.selectedId;
       });
+      if (this.newPixelList.length === 0) {
+        this.isMissing = true;
+      } else {
+        this.isMissing = false;
+      }
     },
   },
 });

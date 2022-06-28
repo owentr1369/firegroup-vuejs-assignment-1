@@ -71,7 +71,9 @@
               class="business_account-select"
               v-model="selectedId"
             >
-              <option value="">53425461676 - Rosy's Business</option>
+              <option value="" selected hidden>
+                Select your business account
+              </option>
               <option
                 v-for="account in listBusinessAccount"
                 :key="account.id"
@@ -87,7 +89,7 @@
             <select name="" id="" class="pixel_select">
               <option value="" selected hidden>Select your pixel</option>
               <option
-                v-for="pixelId in newPixelList"
+                v-for="pixelId in newPixelList || listBusinessAccount"
                 :key="pixelId.id"
                 :value="pixelId.name"
               >
@@ -95,7 +97,7 @@
               </option>
             </select>
           </div>
-          <div class="missing">
+          <div class="missing" v-show="isMissing">
             <img src="./assets/svg/x-circle.svg" alt="" class="missing_icon" />
             <div class="missing_content">
               <h3 class="missing_content-header">Missing pixel</h3>
@@ -152,7 +154,7 @@
               </p>
             </div>
             <div class="switch">
-              <input type="checkbox" />
+              <input type="checkbox" v-model="conversionApi" />
             </div>
           </div>
         </section>
