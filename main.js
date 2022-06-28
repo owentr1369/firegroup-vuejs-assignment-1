@@ -7,6 +7,8 @@ var app = new Vue({
     conversionApi: false,
     isMissing: false,
     isDisabled: true,
+    pixelName: "",
+    pixelId: "",
     listBusinessAccount: [
       {
         id: 255697,
@@ -88,7 +90,20 @@ var app = new Vue({
       },
     ],
   },
-  methods: {},
+  methods: {
+    cancel: function () {
+      this.selectedId = "";
+      this.newPixelList = [];
+      this.conversionApi = false;
+      this.isMissing = false;
+      this.isDisabled = true;
+      this.pixelName = "";
+      this.pixelId = "";
+    },
+    save: function () {
+      console.log("Submit");
+    },
+  },
   watch: {
     isAuto: function () {
       if (this.isAuto == "true") {
