@@ -1,1 +1,131 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+.option {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.option_left, .option_right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 48%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 10px;
+  border: 1px solid #E5E8EF;
+  border-radius: 4px;
+}
+
+.option_left input[type="radio"], .option_right input[type="radio"] {
+  margin-right: 7px;
+  position: relative;
+}
+
+.option_left input[type="radio"]:checked::after, .option_right input[type="radio"]:checked::after {
+  border: 2px solid #5b86e5;
+}
+
+.option_left input[type="radio"]:checked::before, .option_right input[type="radio"]:checked::before {
+  display: block;
+}
+
+.option_left input[type="radio"]::after, .option_right input[type="radio"]::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid #828292;
+  background-color: #fff;
+  z-index: 2;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.option_left input[type="radio"]::before, .option_right input[type="radio"]::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: none;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #5b86e5;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  z-index: 3;
+}
+
+.option_left label, .option_right label {
+  color: #828282;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.option .active {
+  border-color: #5b86e5;
+}
+
+.option .active label {
+  color: #5b86e5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.container {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding: 33px 40px 27px;
+  width: 70%;
+  min-width: 420px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.container .header {
+  width: 100%;
+  border-bottom: 1px solid #E5E8EF;
+  padding-bottom: 16px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #252627;
+}
+/*# sourceMappingURL=main.css.map */

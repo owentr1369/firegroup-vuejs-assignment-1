@@ -13,18 +13,18 @@
         <section class="header">
           <h1 class="header_text">Add New Facebook Pixel</h1>
         </section>
+        <section class="option">
+          <div class="option_left" :class="{ active: isAuto }">
+            <input type="radio" id="auto" name="check" checked />
+            <label for="auto">Auto input pixel</label>
+          </div>
+          <div class="option_right" :class="{ active: !isAuto }">
+            <input type="radio" id="manual" name="check" />
+            <label for="manual">Manual input pixel</label>
+          </div>
+        </section>
         <!-- Is Auto Input -->
         <section class="body" v-if="isAuto">
-          <div class="option">
-            <div class="option_left">
-              <input type="checkbox" name="" id="" />
-              <label for="">Auto input pixel</label>
-            </div>
-            <div class="option_right">
-              <input type="checkbox" name="" id="" />
-              <label for="">Manual input pixel</label>
-            </div>
-          </div>
           <div class="main_account">
             <div class="avatar">
               <img src="./assets/images/avatar.png" alt="avatar" />
