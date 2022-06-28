@@ -6,6 +6,7 @@ var app = new Vue({
     newPixelList: [],
     conversionApi: false,
     isMissing: false,
+    isDisabled: true,
     listBusinessAccount: [
       {
         id: 255697,
@@ -102,8 +103,10 @@ var app = new Vue({
       });
       if (this.newPixelList.length === 0) {
         this.isMissing = true;
+        this.isDisabled = true;
       } else {
         this.isMissing = false;
+        this.isDisabled = false;
       }
     },
   },

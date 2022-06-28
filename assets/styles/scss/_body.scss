@@ -98,7 +98,10 @@
       font-weight: 400;
       font-size: 14px;
       line-height: 16px;
-      color: $input-color;
+      color: $header-color;
+      &:disabled {
+        color: $input-color;
+      }
     }
   }
   .missing {

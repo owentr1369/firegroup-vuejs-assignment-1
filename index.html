@@ -86,10 +86,10 @@
           <!-- Pixel ID -->
           <div class="pixel">
             <label for="" class="pixel_title">Select Pixel</label>
-            <select name="" id="" class="pixel_select">
+            <select name="" id="" class="pixel_select" :disabled="isDisabled">
               <option value="" selected hidden>Select your pixel</option>
               <option
-                v-for="pixelId in newPixelList || listBusinessAccount"
+                v-for="pixelId in newPixelList"
                 :key="pixelId.id"
                 :value="pixelId.name"
               >
