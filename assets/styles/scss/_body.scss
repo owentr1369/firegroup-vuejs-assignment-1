@@ -101,4 +101,32 @@
       color: $input-color;
     }
   }
+  .missing {
+    width: 100%;
+    background: rgba($color: #ff999f, $alpha: 0.2);
+    border-radius: $border-radius;
+    padding: 14px 20px 15px 14px;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    &_icon {
+      margin-right: 11px;
+    }
+    &_content {
+      &-header {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 2px;
+        color: #4f4f4f;
+      }
+      &-text {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        color: #4f4f4f;
+        text-align: justify;
+      }
+    }
+  }
 }

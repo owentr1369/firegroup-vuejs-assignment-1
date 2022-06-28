@@ -211,6 +211,40 @@
   color: #828282;
 }
 
+.body .missing {
+  width: 100%;
+  background: rgba(255, 153, 159, 0.2);
+  border-radius: 4px;
+  padding: 14px 20px 15px 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.body .missing_icon {
+  margin-right: 11px;
+}
+
+.body .missing_content-header {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 2px;
+  color: #4f4f4f;
+}
+
+.body .missing_content-text {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #4f4f4f;
+  text-align: justify;
+}
+
 * {
   margin: 0;
   padding: 0;
