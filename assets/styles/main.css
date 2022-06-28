@@ -251,6 +251,7 @@
 
 .bottom {
   width: 100%;
+  margin-bottom: 25px;
 }
 
 .bottom .target {
@@ -355,6 +356,35 @@
 
 .bottom .conversion .switch input:checked[type="checkbox"]::before {
   left: 18px;
+}
+
+.upgrade {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  border: 1px solid #ff9600;
+  border-radius: 4px;
+  margin-bottom: 29px;
+}
+
+.upgrade_icon {
+  margin-right: 8px;
+}
+
+.upgrade_content {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ff9600;
 }
 
 * {
