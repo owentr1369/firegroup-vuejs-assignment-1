@@ -1,0 +1,28 @@
+.bottom {
+  width: 100%;
+
+  .target {
+    display: flex;
+    flex-direction: column;
+    &_title {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+      color: $header-color;
+      margin-bottom: 8px;
+    }
+    &_select {
+      width: 100%;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      padding-left: 13px;
+      margin-bottom: 20px;
+      border-color: $border-color;
+      border-radius: $border-radius;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 16px;
+      color: $option-color;
+    }
+  }
+}
