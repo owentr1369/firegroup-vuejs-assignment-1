@@ -5,11 +5,11 @@
     display: flex;
     flex-direction: column;
     &_title {
+      margin-bottom: 8px;
       font-weight: 500;
       font-size: 14px;
       line-height: 16px;
       color: $header-color;
-      margin-bottom: 8px;
     }
     &_select {
       width: 100%;
@@ -26,9 +26,9 @@
     }
   }
   .conversion {
-    width: 100%;
     display: flex;
     align-items: flex-start;
+    width: 100%;
     margin-bottom: 35px;
     &_content {
       &-header {
@@ -44,7 +44,7 @@
         line-height: 15px;
         color: $input-color;
         a {
-          color: #5b86e5;
+          color: $main-blue;
           text-decoration: none;
         }
       }
@@ -64,11 +64,11 @@
         &::before {
           content: "";
           position: absolute;
+          top: 50%;
+          left: 3px;
           width: 14px;
           height: 14px;
           border-radius: 50%;
-          top: 50%;
-          left: 3px;
           transform: translateY(-50%);
           background: #fff;
           transition: 0.3s;
@@ -76,7 +76,7 @@
         }
       }
       input:checked[type="checkbox"] {
-        background: #5b86e5;
+        background: $main-blue;
         &::before {
           left: 18px;
         }

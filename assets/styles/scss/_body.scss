@@ -1,30 +1,34 @@
 .body {
   width: 100%;
+
   .main_account {
+    display: flex;
     width: 100%;
     padding: 16px 14px 19px;
-    display: flex;
-    background-color: #f7f8fa;
-    border-radius: $border-radius;
-    border: 1px solid $border-color;
     margin-bottom: 20px;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    background-color: #f7f8fa;
 
     .avatar {
+      position: relative;
       width: 42px;
       height: 42px;
-      position: relative;
       margin-right: 9px;
+
       &_main {
         position: absolute;
         top: 0;
         left: 0;
       }
+
       &_facebook {
         position: absolute;
         right: 0;
         bottom: 0;
       }
     }
+
     .info {
       &_name {
         margin-bottom: 4px;
@@ -42,25 +46,25 @@
       }
     }
     button {
+      margin-left: auto;
       padding: 12px;
       border: 1px solid $border-color;
       border-radius: $border-radius;
       background-color: #fff;
       color: #4f4f4f;
-      margin-left: auto;
       cursor: pointer;
     }
   }
   .business_account {
-    width: 100%;
     display: flex;
     flex-direction: column;
+    width: 100%;
     &-title {
+      margin-bottom: 8px;
       font-weight: 500;
       font-size: 14px;
       line-height: 16px;
       color: $header-color;
-      margin-bottom: 8px;
     }
     &-select {
       width: 100%;
@@ -77,15 +81,15 @@
     }
   }
   .pixel {
-    width: 100%;
     display: flex;
     flex-direction: column;
+    width: 100%;
     &_title {
+      margin-bottom: 8px;
       font-weight: 500;
       font-size: 14px;
       line-height: 16px;
       color: $header-color;
-      margin-bottom: 8px;
     }
     &_select {
       width: 100%;
@@ -105,47 +109,46 @@
     }
   }
   .missing {
-    width: 100%;
-    background: rgba($color: #ff999f, $alpha: 0.2);
-    border-radius: $border-radius;
-    padding: 14px 20px 15px 14px;
     display: flex;
     align-items: flex-start;
+    width: 100%;
+    padding: 14px 20px 15px 14px;
     margin-bottom: 20px;
-    transition: all 1s ease;
+    border-radius: $border-radius;
+    background: rgba($color: #ff999f, $alpha: 0.2);
     &_icon {
       margin-right: 11px;
     }
     &_content {
       &-header {
+        margin-bottom: 2px;
         font-weight: 600;
         font-size: 14px;
         line-height: 20px;
-        margin-bottom: 2px;
         color: #4f4f4f;
       }
       &-text {
         font-weight: 400;
         font-size: 12px;
         line-height: 16px;
-        color: #4f4f4f;
         text-align: justify;
+        color: #4f4f4f;
         a {
-          color: #5b86e5;
+          color: $main-blue;
         }
       }
     }
   }
   .name {
-    width: 100%;
     display: flex;
     flex-direction: column;
+    width: 100%;
     &_title {
+      margin-bottom: 8px;
       font-weight: 500;
       font-size: 14px;
       line-height: 16px;
       color: $header-color;
-      margin-bottom: 8px;
     }
     &_input {
       width: 100%;
@@ -153,24 +156,24 @@
       padding-bottom: 12px;
       padding-left: 13px;
       margin-bottom: 20px;
+      border: 1px solid $border-color;
+      border-radius: $border-radius;
       font-weight: 400;
       font-size: 14px;
       line-height: 16px;
       color: $input-color;
-      border-radius: $border-radius;
-      border: 1px solid $border-color;
     }
   }
   .facebookid {
-    width: 100%;
     display: flex;
     flex-direction: column;
+    width: 100%;
     &_title {
+      margin-bottom: 8px;
       font-weight: 500;
       font-size: 14px;
       line-height: 16px;
       color: $header-color;
-      margin-bottom: 8px;
     }
     &_input {
       width: 100%;
@@ -180,11 +183,11 @@
       margin-bottom: 20px;
       border-radius: $border-radius;
       border: 1px solid $border-color;
+      outline: none;
       font-weight: 400;
       font-size: 14px;
       line-height: 16px;
       color: $input-color;
-      outline: none;
     }
   }
 }

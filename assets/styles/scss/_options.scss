@@ -13,18 +13,18 @@
     border: 1px solid $border-color;
     border-radius: $border-radius;
     input[type="radio"] {
-      margin-right: 7px;
       position: relative;
+      margin-right: 7px;
       cursor: pointer;
       &:checked::after {
-        border: 2px solid #5b86e5;
+        border: 2px solid $main-blue;
       }
       &:checked::before {
         display: block;
       }
       &::after {
-        position: absolute;
         content: "";
+        position: absolute;
         top: 50%;
         left: 50%;
         transform: translate((-50%), (-50%));
@@ -46,7 +46,7 @@
         width: 8px;
         height: 8px;
         border-radius: 50%;
-        background-color: #5b86e5;
+        background-color: $main-blue;
         transition: all 0.1s;
         z-index: 3;
       }
@@ -61,9 +61,9 @@
     }
   }
   .active {
-    border-color: #5b86e5;
+    border-color: $main-blue;
     label {
-      color: #5b86e5;
+      color: $main-blue;
     }
   }
 }
