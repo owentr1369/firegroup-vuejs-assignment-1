@@ -7,8 +7,7 @@
   &_right {
     display: flex;
     width: 48%;
-    padding-top: 12px;
-    padding-bottom: 12px;
+
     padding-left: 10px;
     border: 1px solid $border-color;
     border-radius: $border-radius;
@@ -52,6 +51,9 @@
       }
     }
     label {
+      width: 100%;
+      padding-top: 12px;
+      padding-bottom: 12px;
       color: $input-color;
       font-weight: 500;
       font-size: 14px;

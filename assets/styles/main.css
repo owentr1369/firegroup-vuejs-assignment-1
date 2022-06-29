@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 .option {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -15,8 +15,6 @@
   display: -ms-flexbox;
   display: flex;
   width: 48%;
-  padding-top: 12px;
-  padding-bottom: 12px;
   padding-left: 10px;
   border: 1px solid #e5e8ef;
   border-radius: 4px;
@@ -71,6 +69,9 @@
 }
 
 .option_left label, .option_right label {
+  width: 100%;
+  padding-top: 12px;
+  padding-bottom: 12px;
   color: #828282;
   font-weight: 500;
   font-size: 14px;
