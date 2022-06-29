@@ -86,7 +86,13 @@
           <!-- Pixel ID -->
           <div class="pixel">
             <label for="" class="pixel_title">Select Pixel</label>
-            <select name="" id="" class="pixel_select" :disabled="isDisabled">
+            <select
+              name=""
+              id=""
+              class="pixel_select"
+              :disabled="isDisabled"
+              v-model="selectedPixel"
+            >
               <option value="" selected hidden>Select your pixel</option>
               <option
                 v-for="pixelId in newPixelList"
@@ -119,8 +125,6 @@
               id="pixelName"
               class="name_input"
               placeholder="Input your pixel name"
-              required
-              pattern="[a-zA-Z]*"
               v-model="pixelName"
             />
           </div>

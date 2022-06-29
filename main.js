@@ -9,6 +9,8 @@ var app = new Vue({
     isDisabled: true,
     pixelName: "",
     pixelId: "",
+    selectedPixel: "",
+    hasNumber: false,
     listBusinessAccount: [
       {
         id: 255697,
@@ -101,14 +103,22 @@ var app = new Vue({
       this.pixelId = "";
     },
     save: function () {
-      console.log(this.pixelName);
-      this.selectedId = "";
-      this.newPixelList = [];
-      this.conversionApi = false;
-      this.isMissing = false;
-      this.isDisabled = true;
-      this.pixelName = "";
-      this.pixelId = "";
+      if (this.selectedPixel != "" && this.isAuto) {
+        alert("Auto input pixel - Successfully saved!");
+        this.selectedId = "";
+        this.selectedPixel = "";
+      } else if (
+        this.pixelName != "" &&
+        this.pixelId != "" &&
+        !/\d/.test(this.pixelName) && // pixelName doesn't contain number
+        !this.isAuto
+      ) {
+        alert("Manual input pixel - Successfully saved!");
+        this.pixelName = "";
+        this.pixelId = "";
+      } else {
+        alert("Nothing changed!");
+      }
     },
   },
   watch: {
@@ -129,6 +139,11 @@ var app = new Vue({
       } else {
         this.isMissing = false;
         this.isDisabled = false;
+      }
+    },
+    pixelName: function () {
+      if (/\d/.test(this.pixelName)) {
+        alert("Pixel name must NOT contain number!"); //Alert when pixel name contains number
       }
     },
   },
