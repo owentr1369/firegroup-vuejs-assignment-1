@@ -101,7 +101,14 @@ var app = new Vue({
       this.pixelId = "";
     },
     save: function () {
-      console.log("Submit");
+      console.log(this.pixelName);
+      this.selectedId = "";
+      this.newPixelList = [];
+      this.conversionApi = false;
+      this.isMissing = false;
+      this.isDisabled = true;
+      this.pixelName = "";
+      this.pixelId = "";
     },
   },
   watch: {
